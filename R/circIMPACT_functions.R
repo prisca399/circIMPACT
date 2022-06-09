@@ -295,7 +295,7 @@ marker.selection <- function(dat, dds, sf, p.cutoff=0.01, lfc.cutoff=NULL, metho
   library(doParallel)
   library(dplyr)
   library(tidyr)
-  no_cores <- detectCores() - 4  
+  no_cores <- detectCores() - 3  
   registerDoParallel(cores=no_cores)  
   
   circ_mark = foreach::foreach(i=1:nrow(dat)) %dopar% {
